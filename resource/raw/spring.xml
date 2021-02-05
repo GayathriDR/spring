@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean class="com.xworkz.springassignment.Projector" id="projector" >
+	<constructor-arg value="3"/>
+	<constructor-arg value="true"/>
+	<constructor-arg value="100.00"/>
+	<property name="cost" value="1500"/>
+	</bean>
+	
+	<bean class="com.xworkz.springassignment.Ball" id="ball">
+	<constructor-arg value="tennisball"/>
+	<constructor-arg value="tennis"/> 
+	</bean> 
+	 
+	
+	<!--<bean class="com.xworkz.springassignment.Ball" id="ball">
+	<constructor-arg value="vallyball"/>
+	<constructor-arg type="double" value="1000.00"/>
+	</bean>  - --> 
+	
+	<!--<bean class="com.xworkz.springassignment.Ball" id="ball">
+	<constructor-arg value="100.00" type="double" />
+	<constructor-arg value="throwball"/>
+	</bean>- -->
+	
+	<bean class="com.xworkz.springassignment.Country" id="country">
+	<property name="president" value="APJ Abdulkalam"/>
+	<property name="capital" value="bangalore"/>
+	<property name="population" value="60000.00"/>
+	<property name="noOfStates" value="28"/>
+	<constructor-arg value="Narendra Modi"/>
+	
+	</bean>
+	</beans> 
