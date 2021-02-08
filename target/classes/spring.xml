@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean class="java.lang.Thread" id="thread"/>
+	<bean class="com.xworkz.inbuiltclass.JavaCollection" id="javacollection">
+	<property name="arrayListEle">
+	<list>
+	<value>INDIA</value>
+	<value>US</value>
+	</list>
+	</property>
+	</bean>
+	<bean class="com.xworkz.inbuiltclass.JavaCollection" id="java">
+	<property name="mapEle">
+	<map>
+	<entry key="1" value="JAVA"/>
+	<entry key="2" value="WEB"/>
+	<entry key="3" value="PYTHON"/>
+	<entry key="4" value="SQL"/>
+	</map>
+	</property>
+	</bean>
+	<bean class="com.xworkz.inbuiltclass.JavaCollection" id="hashset">
+	<property name="linkedHashEle">
+	<set>
+	<value>1</value>
+	<value>2 </value>
+	<value>3</value>
+	<value>4</value>
+	</set>
+	</property>
+	</bean>
+	<bean class="com.xworkz.inbuiltclass.JavaCollection" id="property">
+	<property name="propertyEle">
+	<props>
+	<prop key="java">development</prop>
+	<prop key="web">ui design</prop>
+	<prop key="sql">database</prop>
+	<prop key="spring">manage objects</prop>
+	
+	</props>
+	</property>
+	</bean>
+	</beans>
