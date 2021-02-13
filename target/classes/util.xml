@@ -9,4 +9,5 @@
 	<property name="location" value="connection.properties"/>
 	</bean>
 	<import resource="database.xml" />
+	<import resource="book.xml"/>
 	</beans>

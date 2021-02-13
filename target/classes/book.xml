@@ -5,9 +5,19 @@
 	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" id="propertyPlaceholderConfigurer">
-	<property name="location" value="connection.properties"/>
+	<bean class="java.lang.Integer" id="integer">
+	<constructor-arg value="5"/>
 	</bean>
-	<import resource="database.xml" />
-	<import resource="book.xml"/>
+	
+	<bean class="java.lang.Double" id="double">
+	<constructor-arg value="900.00"/>
+	</bean>
+	
+	<bean class="com.xworkz.propertydatabase.Book" id="book">
+	<property name="bookName" value="complete refrence"/>
+	<property name="bookId" ref="integer"/>
+	<property name="bookPrice" ref="double"/>
+	</bean>
 	</beans>
+	
+	
