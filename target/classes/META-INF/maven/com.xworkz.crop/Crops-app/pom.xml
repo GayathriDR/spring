@@ -9,6 +9,7 @@
   	<spring-version>5.2.12.RELEASE</spring-version>
   	<lombok-version>1.18.18</lombok-version>
   	<spring-jdbc>5.2.12.RELEASE</spring-jdbc>
+  	<spring-orm>5.2.1.RELEASE</spring-orm>
   </properties>
   <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
   <dependencies>
@@ -28,6 +29,13 @@
     <artifactId>spring-jdbc</artifactId>
     <version>${spring-jdbc}</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+    <version>${spring-orm}</version>
+</dependency>
+
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
