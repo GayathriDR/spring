@@ -27,6 +27,8 @@ import lombok.ToString;
 @Table(name="crops")
 public class CropsEntity implements Serializable {
 	
+	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="CID")
