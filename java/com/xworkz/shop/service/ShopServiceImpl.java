@@ -66,7 +66,10 @@ public class ShopServiceImpl implements ShopService {
 		else{
 			System.out.println( "create a shopentity");
 		}
-		shopDAO.saveShop(shopEntity);
+		if(valid==true){
+			shopDAO.saveShop(shopEntity);
+		}
+		
 		return valid;
 	}
 
