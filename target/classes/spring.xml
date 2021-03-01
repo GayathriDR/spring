@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!--  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" id="propertyPlaceholderConfigurer">
+	<property name="location" value="connection.properties"/>
+	</bean>-->
+	 
+	 
+	<!--<bean class="com.zaxxer.hikari.HikariDataSource" id="hikariDataSource">
+	<constructor-arg ref="hikariConfig"/>
+	</bean>-->
+	<!--   <import resource="datasource.xml" />-->
+	<bean class="com.zaxxer.hikari.HikariDataSource" id="hikariDataSource">
+	<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring"/>
+	<property name="username" value="root"/>
+	<property name="password" value="root"/>
+	<property name="maximumPoolSize" value="10"/>
+	<property name="idleTimeout" value="30000"/>
+	</bean>
+	<bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean" id="localSessionFactoryBean">
+	<property name="configLocation" value="hibernate.cfg.xml"/>
+	<property name="dataSource" ref="hikariDataSource"/>
+	</bean>
+	<!--  <property name="hibernateProperties">
+	<props>
+	 <prop key="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</prop>
+	<prop key="hibernate.show_sql">true</prop>
+	<prop key="hibernate.hbm2ddl.auto">update</prop>
+	</props>
+	</property>
+	<property name="annotatedClasses">
+	<array>
+	<value>com.xworkz.hikaricp.entity.LaptopEntity</value>
+	</array>
+	</property>-->
+	
+	<bean class="com.xworkz.hikaricp.service.LaptopServiceImpl" id="laptopServiceImpl">
+	<constructor-arg ref="hikariDAOImpl"/>
+	</bean>
+	<bean class="com.xworkz.hikaricp.dao.HikariDAOImpl" id="hikariDAOImpl">
+	<property name="factory" ref="localSessionFactoryBean"/>
+	</bean>
+	
+	</beans>
