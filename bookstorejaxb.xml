@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:bookStore xmlns:ns2="com.xworkz.xml">
+    <booklist>
+        <book>
+            <name>oracle</name>
+            <author>james</author>
+            <publisher>mc</publisher>
+            <price>500.0</price>
+        </book>
+        <book>
+            <name>spring</name>
+            <author>mykong</author>
+            <publisher>kong</publisher>
+            <price>800.0</price>
+        </book>
+    </booklist>
+    <name>Swapna</name>
+    <location>bangalore</location>
+</ns2:bookStore>
