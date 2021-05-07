@@ -35,10 +35,17 @@ public class RegisterComponent {
 	public String onRegister(@ModelAttribute RegisterDTO registerDTO,Model model) {
 		System.out.println("invoked onregister");
 		System.out.println(registerDTO);
-		registerService.validateForm(registerDTO);
+		boolean validUser=registerService.validateForm(registerDTO);
 		model.addAttribute("username",registerDTO.getUsername());
 //		return "success";
-		return " Result";
+		if(validUser)
+		{
+			return " Result";
+		}
+		else {
+			
+		}
+		return "register";
 		
 	}
 

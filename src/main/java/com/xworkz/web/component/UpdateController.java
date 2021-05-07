@@ -13,46 +13,51 @@ import com.xworkz.web.service.RegisterService;
 
 @Component
 @RequestMapping("/")
-public class LoginController {
+
+public class UpdateController {
 	@Autowired
 	private RegisterService registerService;
-	
+
 	public RegisterService getRegisterService() {
 		return registerService;
 	}
+
 	public void setRegisterService(RegisterService registerService) {
 		this.registerService = registerService;
 	}
-	public LoginController() {
-		System.out.println("login details"+getClass().getSimpleName());
-		
+
+	public UpdateController() {
+		System.out.println("login details" + getClass().getSimpleName());
+
 	}
-	@RequestMapping("/login.odc")
-	public String onLogin(HttpServletRequest request,@ModelAttribute RegisterDTO registerDTO,Model model) {
-		System.out.println("invoked onLogin");
+
+	@RequestMapping("/update.odc")
+	public String updateInfo(HttpServletRequest request, @ModelAttribute RegisterDTO registerDTO,Model model) {
+		System.out.println("invoked updateInfo");
 		try {
-			String mail=request.getParameter("email");
-			String password=request.getParameter("password");
-			boolean validateEmailandPassword = registerService.validateEmailandPassword(registerDTO);
-			model.addAttribute("email", registerDTO.getEmail());
-			if(validateEmailandPassword) {
-				
-				
-				return "home";
-				
+//			String mail=request.getParameter("email");
+			RegisterDTO updatedData=registerService.findMailandUpdate(registerDTO);
+			model.addAttribute("Data", updatedData);
+			if(updatedData!=null) {
+				model.addAttribute("data", updatedData);
+				return "TobeUpdate";
 				
 			}
 			else {
-				return "login";
+				return "update";
 			}
 			
 		}
-		catch(Exception e) {
-			e.printStackTrace();
-			System.out.println("cant login");
-	    	 return "login";
-		}
-		
+
+	catch(
+
+	Exception e)
+	{
+		e.printStackTrace();
+		System.out.println("cant login");
+		return "update";
 	}
+
+}
 
 }

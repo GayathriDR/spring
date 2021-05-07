@@ -13,7 +13,7 @@ import com.xworkz.web.service.RegisterService;
 
 @Component
 @RequestMapping("/")
-public class LoginController {
+public class ForgotPasswordController {
 	@Autowired
 	private RegisterService registerService;
 	
@@ -23,36 +23,28 @@ public class LoginController {
 	public void setRegisterService(RegisterService registerService) {
 		this.registerService = registerService;
 	}
-	public LoginController() {
-		System.out.println("login details"+getClass().getSimpleName());
+	public ForgotPasswordController() {
+		System.out.println("forgot password"+getClass().getSimpleName());
 		
 	}
-	@RequestMapping("/login.odc")
-	public String onLogin(HttpServletRequest request,@ModelAttribute RegisterDTO registerDTO,Model model) {
+	@RequestMapping("/send.odc")
+	public String onForgotPassword(HttpServletRequest request,@ModelAttribute RegisterDTO registerDTO) {
 		System.out.println("invoked onLogin");
 		try {
 			String mail=request.getParameter("email");
-			String password=request.getParameter("password");
-			boolean validateEmailandPassword = registerService.validateEmailandPassword(registerDTO);
-			model.addAttribute("email", registerDTO.getEmail());
-			if(validateEmailandPassword) {
-				
-				
-				return "home";
-				
-				
+			boolean validateEmail=registerService.validateEmail(registerDTO);
+			if(validateEmail) {
+				return "resetPasswordSuccess";
 			}
 			else {
-				return "login";
+				return "invalid email,do register";
 			}
-			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("cant login");
-	    	 return "login";
+	    	 return " Error";
 		}
-		
-	}
 
+}
 }

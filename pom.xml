@@ -105,6 +105,11 @@
     <version>${lombok-version}</version>
     <scope>provided</scope>
 </dependency>
+<!--  <dependency>
+	<groupId>com.spring.mvc</groupId>
+    <artifactId>SpringMvcPagination</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</dependency>-->
  <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>

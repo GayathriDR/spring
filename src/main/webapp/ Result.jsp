@@ -9,7 +9,7 @@
 </head>
 <body>
     <center>
-        <h2 color:"green">Thank you, your email has been sent.</h2>
+        <h2 color:"green">Thank you, you have successfully registerd.</h2>
     </center>
 </body>
 </html>

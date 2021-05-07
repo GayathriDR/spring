@@ -11,20 +11,34 @@
             <a class="navbar-brand" href="#">X-workz</a>
         </div>
     </nav>
-<p>successfully  ${email} log-in</p>
-<!--  <a href="update.odc?email="${Email}></a>-->
-<form action="update.odc" name="form1">
-<input type="email" name="email" hidden  value="${email}"/>
-<button type="submit">update info</button>
- 
-</form>
+<div class="container-fluid">
+        <nav class="navbar navbar-dark default-color">
+<form action="send.odc" method="post" id="form" class="form-inline" style="width:500px;margin:auto">
 
- <!-- <a href="update.jsp">update info</a> -->
- <a href="search.jsp">search</a>
- <a href="add.jsp">Add</a>
- <a href="viewProducts.odc">ViewProducts</a>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+ <div>
+        <p>We will be sending a reset password link to your email.</p>
+    </div>
+    <div class="input-group">
+ <span class="input-group-addon" id="basic-addon1">Email</span></div>
+ <br/>
+ <div>
+ <input type="text" class="form-control" placeholder="Email" name="email" aria-describedby="basic-addon1">
+ </div>
+ <br/>
+ <button class="btn btn-outline-success" type="getemail" btn-clr="green">send</button>
+ </form>
+ </nav>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="validate-script.js"></script>
+
+
 </body>
+
+
+
+
+
 <footer class="fixed-bottom" style="background-color: #e3f2fd; text-align: center;">Copyright@All rights resrved</footer>
 </html>

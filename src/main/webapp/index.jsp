@@ -13,19 +13,19 @@
             <a class="navbar-brand" href="#">welcome to spring mvc!</a>
         </div>
     </nav>
-<a href="clickme.odc?price=45&city=blr">Click Me</a>
-<a href="clickme.odc?price=60&city=mysore">Click Me</a>
-<a href="clickme.odc?price=80&city=mangalore">Click Me</a>
-<a href="register.jsp">register</a>
+
+		<pre><a href="register.jsp">register</a></pre>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     <script src="validate-script.js"></script>
     
 </body>
 
+<footer class="fixed-bottom" style="background-color: #e3f2fd; text-align: center;">Copyright@All rights resrved</footer>
 
 
 
- <!--  <footer style="background-color: aquamarine; text-align: center;">Copyright@All rights resrved</footer>-->
+
+ 
  <footer class="fixed-bottom" style="background-color: aquamarine; text-align: center;">Copyright@All rights resrved</footer>
 </html>
